@@ -24,20 +24,20 @@ router.get('/signin',async(ctx) => {
 
 	var response = {
 		"name": ctx.query.name,
-		"password": ctx.quert.password
+		"password": ctx.query.password
 	};
 
 	var addSql = 'SELECT * FROM Account WHERE AccountName=?';
 	var addSqlParams = [response.name];
 	
 	ctx.body = await new Promise((resolve, reject) => {
-		connnection.query(addSql, addSqlParams, function (err, result) {
+		connection.query(addSql, addSqlParams, function (err, result) {
 			if (err) {
 				reject(err);
 				console.log('[SELECT ERROR] - ', err.message);
 				return;
 			}
-			if(result[0].Password != response.password) {
+			if(result[0].Password == response.password) {
 				resolve(result[0]);
 				console.log('Welcome~ SignIn Successful ^_^' + '\\' + 'Level: ' + result[0].Level + ' Houses: ' + result[0].Houses);
 			}
