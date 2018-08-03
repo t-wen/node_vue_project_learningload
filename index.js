@@ -92,14 +92,16 @@ router.get('/signup',async (ctx) => {
 	var addSqlParams = [response.name, response.password, response.firstname, response.lastname, response.birthday, response.sex, response.age, response.wechart, response.qq, response.email, response.country, response.address, response.phone, response.websize, response.github, response.bio];
 
 	ctx.body = await new Promise((resolve, reject) => {
-		connection.query(addSql,addSqlParams,function (err, result) {
-			if(err){
-				reject(err);
-				console.log('[INSERT ERROR] - ',err.message);
-				return;
-			}
-			resolve('Signup Successful!');
-		});
+
+        connection.query(addSql,addSqlParams,function (err, result) {
+            if(err){
+                reject(err);
+                console.log('[INSERT ERROR] - ',err.message);
+                return;
+            }
+            resolve('Singup Successful!');
+        });
+
 	});
 	connection.end();
 });
