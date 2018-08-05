@@ -5,7 +5,7 @@ const Router = require('koa-router');
 const router = new Router();
 
 // $ GET /package.json
-app.use(serve('.'));
+app.use(serve('../client'));
 
 //登陆模块 signin()
 router.get('/signin', async (ctx) => {
@@ -36,7 +36,7 @@ router.get('/signin', async (ctx) => {
 	var addSql = 'SELECT * FROM ArthurSlogAccount WHERE AccountName=?';
 	var addSqlParams = [response.name];
 
-	ctx.body = await new Promise((resolve, reject) => {
+	var datas = await new Promise((resolve, reject) => {
 
 		connection.query(addSql, addSqlParams, function (err, result) {
 			if (err) {
@@ -54,6 +54,10 @@ router.get('/signin', async (ctx) => {
 			}
 		});
 	});
+	
+	if(datas){
+		ctx.redirect('account.html');
+	}
 	connection.end();
 });
 
