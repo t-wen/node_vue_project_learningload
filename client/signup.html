@@ -31,9 +31,20 @@
         <br> Birthday:
         <br>
         <input type="text" name="birthday">
-        <br> Sex:
         <br>
-        <input type="text" name="sex">
+		
+		<br>
+		<div>
+			<span>Sex: {{ sex }}</span>
+			<br>
+			<input type="radio" id="one" value="Male" v-model="sex">
+			<label for="one">Male</label>
+			<br>	
+			<input type="radio" id="one" value="Female" v-model="sex">
+			<label for="two">Female</label>
+		</div>
+		<br>
+		
         <br> Age:
         <br>
         <input type="text" name="age">
@@ -69,7 +80,7 @@
         <input type="submit" value="完成注册">
     </form>
 
-    <a href="./account.html">Signup</a>
+    <a href="./form.html">Signup</a>
     <br>
     <a href="./index.html">Return index`s page</a>
 	<br><br>
