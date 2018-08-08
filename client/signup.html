@@ -4,34 +4,63 @@
 <head>
     <meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <title>TracyWorld_signup</title>
 </head>
 
 <body>
-	<div class="signup-container">
+	<div id="signup-container">
     <div>This is signup`s page by TracyWorld!</div>
     <p>Signup</p>
 
     <form action="http://127.0.0.1:3000/signup" method="GET">
+		<br>
+		<div>
         Account:
         <br>
         <input type="text" name="name">
-        <br> Password:
+		</div>
+
+		<br>
+		<br>
+		<div>
+        Password:
         <br>
         <input type="text" name="password">
-        <br> Again Password:
+		</div>
+ 
+        <br>
+		<br>
+		<div>
+		 Again Password:
         <br>
         <input type="text" name="repassword">
-        <br> First Name:
+        </div>
+
+		<br>
+		<br>
+		<div>
+		 First Name:
         <br>
         <input type="text" name="firstname">
-        <br> Last Name:
+		</div>
+
+		<br> 
+		<br>
+		<div>
+		Last Name:
         <br>
         <input type="text" name="lastname">
-        <br> Birthday:
+		</div>
+		
+		<br> 
+		<br>
+		<div>
+		Birthday:
         <br>
         <input type="text" name="birthday">
-        <br>
+        </div>
+		<br>
 		
 		<br>
 		<div>
@@ -49,7 +78,7 @@
 		<div>
 			<span>Age: {{ age }}</span>
 			<br>
-			<select v-model="age">
+			<select v-model="age" name="age">
 				<option disabled value="">Select</option>
 				<option>1</option>
 			    <option>2</option> 
@@ -74,43 +103,87 @@
         </div>
 
 		<br>
-        <br> Wechart:
+        <br> 
+		<div>
+		Wechart:
         <br>
         <input type="text" name="wechart">
-        <br> QQ:
+        </div>
+
+		<br>
+		<br> 
+		<div>
+		QQ:
         <br>
         <input type="text" name="qq">
-        <br> Email:
+        </div>
+		
+		<br>
+		<br>
+		<div> 
+		Email:
         <br>
         <input type="text" name="email">
-        <br> Contury:
+        </div>
+
+		<br>
+		<br> 
+		<div>
+		Contury:
         <br>
         <input type="text" name="contury">
-        <br> Address:
+		</div>        
+
+		<br>
+		<br>
+		<div> 
+		Address:
         <br>
         <input type="text" name="address">
-        <br> Phone:
+        </div>
+
+		<br> 
+		<br>
+		<div>
+		Phone:
         <br>
         <input type="text" name="phone">
-        <br> Websize:
+		</div>
+
+		<br>
+		<br>
+		<div>
+		Websize:
         <br>
         <input type="text" name="websize">
-        <br> Github:
+		</div>
+
+		<br>        
+		<br>
+		<div> 
+		Github:
         <br>
         <input type="text" name="github">
-        <br> Bio:
+		</div>
+		
+        <br>
+		<br>
+		<div>
+		Bio:
         <br>
         <input type="text" name="bio">
-        <br>
+        </div>
+
+		<br>
         <br>
         <input type="submit" value="完成注册">
     </form>
 
-	<a href="./form.html">Signup</a>
-	<br> 
     <a href="./index.html">Return index`s page</a>
 	<br><br>
 	</div>
+	
+	<script src="./js/signup.js"></script>
 </body>
 
 </html>
