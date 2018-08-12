@@ -13,10 +13,10 @@
     <div>This is signup`s page by TracyWorld!</div>
     <p>Signup</p>
 
-    <form action="http://127.0.0.1:3000/signup" method="GET">
+    <form id="form" v-on:submit="addUser">
 		<br>
 		<div>
-        Account: {{  account }}
+        Account: {{  name }}
         <br>
         <input type="text" name="name" placeholder="username">
 		</div>
