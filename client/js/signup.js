@@ -1,3 +1,5 @@
+var host = 'http://127.0.0.1:3000/signup?';
+
 var signup_container = new Vue({
 	el: '#signup-container',
 	data: {
@@ -19,6 +21,13 @@ var signup_container = new Vue({
 		phone: '',
 		websize: '',
 		github: '',
-		bio: ''
+		bio: '',
+		commits: ['null', 'null']
+	},
+	methods: {
+		addUser: function () {
+			var xhr = new XMLHttpRequest()
+			xhr.open('GET', host + 'name=' + this.name +)
+		}
 	}
 })
