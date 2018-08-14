@@ -3,7 +3,7 @@ var host = 'http://127.0.0.1:3000/signup?';
 var signup_container = new Vue({
 	el: '#signup-container',
 	data: {
-		account: '',
+		name: '',
 		password: '',
 		repassword: '',
 		firstname: '',
