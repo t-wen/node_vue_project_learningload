@@ -26,7 +26,7 @@
 		<div>
         Password: {{ password }}
         <br>
-        <input type="text" name="password" placeholder="password">
+        <input type="text" v-model="password" placeholder="password">
 		</div>
  
         <br>
@@ -34,7 +34,7 @@
 		<div>
 		 Again Password: {{ repassword }}
         <br>
-        <input type="text" name="repassword" placeholder="repassword">
+        <input type="text" v-model="repassword" placeholder="repassword">
         </div>
 
 		<br>
@@ -42,7 +42,7 @@
 		<div>
 		 First Name: {{ firstname }}
         <br>
-        <input type="text" name="firstname" placeholder="firstname">
+        <input type="text" v-model="firstname" placeholder="firstname">
 		</div>
 
 		<br> 
@@ -50,7 +50,7 @@
 		<div>
 		Last Name: {{ lastname }}
         <br>
-        <input type="text" name="lastname" placeholder="lastname">
+        <input type="text" v-model="lastname" placeholder="lastname">
 		</div>
 		
 		<br> 
@@ -58,7 +58,7 @@
 		<div>
 		Birthday: {{ birthday }}
         <br>
-        <input type="text" name="birthday" placeholder="2000/08/08">
+        <input type="text" model="birthday" placeholder="2000/08/08">
         </div>
 		<br>
 		
@@ -89,7 +89,7 @@
 		<div>
 		Wechart: {{ wechart }}
         <br>
-        <input type="text" name="wechart" placeholder="wechart`s name">
+        <input type="text" v-model="wechart" placeholder="wechart`s name">
         </div>
 
 		<br>
@@ -97,7 +97,7 @@
 		<div>
 		QQ: {{ qq }}
         <br>
-        <input type="text" name="qq" placeholder="12345678">
+        <input type="text" v-model="qq" placeholder="12345678">
         </div>
 		
 		<br>
@@ -105,7 +105,7 @@
 		<div> 
 		Email: {{ email }}
         <br>
-        <input type="text" name="email" placeholder="12345678@qq.com">
+        <input type="text" v-model="email" placeholder="12345678@qq.com">
         </div>
 
 		<br>
@@ -113,7 +113,7 @@
 		<div>
 		Contury: {{ contury }}
         <br>
-        <input type="text" name="contury" placeholder="China">
+        <input type="text" v-model="contury" placeholder="China">
 		</div>        
 
 		<br>
@@ -121,7 +121,7 @@
 		<div> 
 		Address: {{ address }}
         <br>
-        <input type="text" name="address" placeholder="Guangzhou">
+        <input type="text" v-model="address" placeholder="Guangzhou">
         </div>
 
 		<br> 
@@ -129,7 +129,7 @@
 		<div>
 		Phone: {{ phone }}
         <br>
-        <input type="text" name="phone" placeholder="138********">
+        <input type="text" v-model="phone" placeholder="138********">
 		</div>
 
 		<br>
@@ -137,7 +137,7 @@
 		<div>
 		Websize: {{ websize }}
         <br>
-        <input type="text" name="websize" placeholder="xxx.com">
+        <input type="text" v-model="websize" placeholder="xxx.com">
 		</div>
 
 		<br>        
@@ -145,7 +145,7 @@
 		<div> 
 		Github: {{ github }}
         <br>
-        <input type="text" name="github" placeholder="Github`s URl">
+        <input type="text" v-model="github" placeholder="Github`s URl">
 		</div>
 		
         <br>
@@ -153,7 +153,7 @@
 		<div>
 		Bio: {{ bio }}
         <br>
-        <input type="text" name="bio" placeholder="This is the world~">
+        <input type="text" v-model="bio" placeholder="This is the world~">
         </div>
 
 		<br>
@@ -165,7 +165,7 @@
 	<br><br>
 	<div>
 		<ul>
-			<li>
+			<li v-for="record in  commits">
 				<span class="username">
 					{{ record }}
 				</span>
