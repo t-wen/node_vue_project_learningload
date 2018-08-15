@@ -13,7 +13,7 @@
     <div>This is signup`s page by TracyWorld!</div>
     <p>Signup</p>
 
-    <form id="form" v-on:submit="addUser">
+    <form id="form" v-on:submit.prevent="addUser">
 		<br>
 		<div>
         Account: {{  name }}
@@ -163,15 +163,9 @@
 
     <a href="./index.html">Return index`s page</a>
 	<br><br>
-	<div>
-		<ul>
-			<li v-for="record in  commits">
-				<span class="username">
-					{{ record }}
-				</span>
-			</li>
-		</ul>
-	</div>
+		<div>
+			{{ commits }}
+		</div>
 	</div>
 	
 	<script src="./js/signup.js"></script>
