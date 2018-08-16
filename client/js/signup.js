@@ -22,7 +22,7 @@ var signup_container = new Vue({
 		websize: '',
 		github: '',
 		bio: '',
-		commits: ['null', 'null']
+		commits: null
 	},
 	methods: {
 		addUser: function () {
