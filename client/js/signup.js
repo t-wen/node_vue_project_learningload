@@ -36,7 +36,10 @@ var signup_container = new Vue({
 			+ '&address=' + this.address + '&phone=' + this.phone + '&websize=' + this.websize
 			+ '&github=' + this.github + '&bio=' + this.bio, true)
 
-			
+			xhr.onload = function () {
+				self.commits = xhr.responseText
+			}
+
 			xhr.send()
 		}
 	}
