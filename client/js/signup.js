@@ -27,12 +27,16 @@ var signup_container = new Vue({
 	methods: {
 		addUser: function () {
 			var xhr = new XMLHttpRequest()
+
+			var seft = this
 			xhr.open('GET', host + 'name=' + this.name + '&password=' + this.password + '&firstname=' + 
 			this.firstname + '&lastname' + this.lastname + '&birthday=' + this.birthday
 			+ '&sex=' + this.currentSex + '&age=' + this.currentAge + '&wechart=' + this.wechart
 			+ '&qq=' + this.qq + '&email=' + this.email + '&contury=' + this.contury
 			+ '&address=' + this.address + '&phone=' + this.phone + '&websize=' + this.websize
 			+ '&github=' + this.github + '&bio=' + this.bio, true)
+
+			
 			xhr.send()
 		}
 	}
