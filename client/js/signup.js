@@ -29,12 +29,12 @@ var signup_container = new Vue({
 			var xhr = new XMLHttpRequest()
 
 			var seft = this
-			xhr.open('GET', host + 'name=' + this.name + '&password=' + this.password + '&firstname=' + 
-			this.firstname + '&lastname' + this.lastname + '&birthday=' + this.birthday
-			+ '&sex=' + this.currentSex + '&age=' + this.currentAge + '&wechart=' + this.wechart
-			+ '&qq=' + this.qq + '&email=' + this.email + '&contury=' + this.contury
-			+ '&address=' + this.address + '&phone=' + this.phone + '&websize=' + this.websize
-			+ '&github=' + this.github + '&bio=' + this.bio, true)
+			xhr.open('GET', host + 'name=' + self.name + '&password=' + self.password + '&firstname=' + 
+			self.firstname + '&lastname' + self.lastname + '&birthday=' + self.birthday
+			+ '&sex=' + self.currentSex + '&age=' + self.currentAge + '&wechart=' + self.wechart
+			+ '&qq=' + self.qq + '&email=' + self.email + '&contury=' + self.contury
+			+ '&address=' + self.address + '&phone=' + self.phone + '&websize=' + self.websize
+			+ '&github=' + self.github + '&bio=' + self.bio, true)
 
 			xhr.onload = function () {
 				self.commits = xhr.responseText
