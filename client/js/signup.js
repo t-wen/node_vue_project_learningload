@@ -30,7 +30,7 @@ var signup_container = new Vue({
 
 			var self = this
 			xhr.open('GET', host + 'name=' + self.name + '&password=' + self.password + '&firstname=' + 
-			self.firstname + '&lastname' + self.lastname + '&birthday=' + self.birthday
+			self.firstname + '&lastname=' + self.lastname + '&birthday=' + self.birthday
 			+ '&sex=' + self.currentSex + '&age=' + self.currentAge + '&wechart=' + self.wechart
 			+ '&qq=' + self.qq + '&email=' + self.email + '&contury=' + self.contury
 			+ '&address=' + self.address + '&phone=' + self.phone + '&websize=' + self.websize
