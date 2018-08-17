@@ -56,7 +56,7 @@ router.get('/signin', async (ctx) => {
 	});
 	
 	if(datas){
-		ctx.redirect('account.html');
+		ctx.body = datas;
 	}
 	connection.end();
 });
