@@ -3,6 +3,8 @@ var host = 'http://127.0.0.1:3000/';
 var signup_container = new Vue({
 	el: '#signup-container',
 	data: {
+		name_signin: '',
+		password_signin: '',
 		name: '',
 		password: '',
 		repassword: '',
@@ -22,9 +24,19 @@ var signup_container = new Vue({
 		websize: '',
 		github: '',
 		bio: '',
-		commits: null
+		commits: null,
+		pagestate: '0'
 	},
 	methods: {
+		signin_index: function () {
+			this,pagestate = '1'
+		},
+		signup_index: function () {
+			this.pagestate = '2'
+		},
+		return_index: function () {
+			this.pagestate = '0'
+		},
 		signin: function () {
 			var xhr = new XMLHttpRequest()
 
