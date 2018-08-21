@@ -194,16 +194,13 @@
                 <input type="submit" value="完成注册">
             </form>
 
+            <button v-on:click="addUser">addUser</button>
             <br>
             <button v-on:click="return_index">ReturnIndex</button>
             <br>
         </template>
 
-        <template id="Signin_result" v-else-if="pagestate === '3'">
-            {{ commits }}
-        </template>
-
-        <template id="Signin_result" v-else-if="pagestate === '4'">
+        <template id="returnResult" v-else-if="pagestate === '3'">
             {{ commits }}
         </template>
     </div>
