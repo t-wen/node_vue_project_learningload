@@ -37,10 +37,9 @@ var signup_container = new Vue({
 		signup_index: function () {
 			this.pagestate = '2'
 		},
-		return_index: function () {
-			this.pagestate = '0'
-		},
 		signin: function () {
+			this.pagestate = '3'
+			
 			var xhr = new XMLHttpRequest()
 
 			var self = this
@@ -53,6 +52,8 @@ var signup_container = new Vue({
 			xhr.send()
 		},
 		addUser: function() {
+			this.pagestate = '3'
+
 			var xhr = new XMLHttpRequest()
 
 			var self = this
