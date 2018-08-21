@@ -28,6 +28,9 @@ var signup_container = new Vue({
 		pagestate: '0'
 	},
 	methods: {
+		return_index: function () {
+			this.pagestate = '0'
+		},
 		signin_index: function () {
 			this,pagestate = '1'
 		},
