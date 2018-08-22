@@ -201,7 +201,9 @@
         </template>
 
         <template id="returnResult" v-else-if="pagestate === '3'">
-            {{ commits }}
+            <div v-for="(value, key) in commits">
+                {{ key }}: {{ value }}
+            </div>
         </template>
     </div>
     

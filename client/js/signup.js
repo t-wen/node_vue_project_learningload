@@ -32,7 +32,7 @@ var signup_container = new Vue({
 			this.pagestate = '0'
 		},
 		signin_index: function () {
-			this,pagestate = '1'
+			this.pagestate = '1'
 		},
 		signup_index: function () {
 			this.pagestate = '2'
@@ -46,7 +46,9 @@ var signup_container = new Vue({
 			xhr.open('GET', host + 'signin?' + 'name=' + self.name_signin + '&password=' + self.password_signin, true)
 			
 			xhr.onload = function () {
-				self.commits = xhr.responseText
+				//self.commits = xhr.responseText
+				var myObj = JSON.parse(xhr.responseText);
+				self.commits = myObj
 			}
 
 			xhr.send()
