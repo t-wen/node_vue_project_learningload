@@ -204,6 +204,11 @@
             <div>
                 <img id="TracyWorld_icon" src="/image/TracyWorld.png" alt="TracyWorld_icon" />
             </div>
+            <div>
+                <div>Uploading {{ image }} files...</div>
+                <br>
+                <input type="file" v-on:change="filesChange">
+            </div>
             <div id="signinResult">
                 <div v-for="(value, key) in commits">
                     {{ key }}: {{ value }}
