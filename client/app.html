@@ -201,6 +201,9 @@
         </template>
 
         <template id="returnResult" v-else-if="pagestate === '3'">
+            <div>
+                <img id="TracyWorld_icon" src="/image/TracyWorld.png" alt="TracyWorld_icon" />
+            </div>
             <div id="signinResult">
                 <div v-for="(value, key) in commits">
                     {{ key }}: {{ value }}
