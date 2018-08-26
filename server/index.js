@@ -120,8 +120,14 @@ router.get('/signup', async (ctx) => {
 	connection.end();
 });
 
-router.post('/uploadfiles', async (ctx) => {
-	console.log('客户端与服务端的 uploadfiles 函数 已关联');
+router.post('/uploadfiles', koaBody({multipart: true}), async (ctx) => {
+	console.log('fields: ', ctx.request.fields);
+	console.log('files: ', ctx.request.files);
+
+	const file = ctx.request.files.myFile;
+	const reader = fs.createReadStream(file.path);
+	const stream = fs.creatWriteStream('TracyWorld_icon' + '.jpg');
+	reader.pipe(stream);
 });
 
 app.use(router.routes());
