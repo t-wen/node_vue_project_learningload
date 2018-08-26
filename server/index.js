@@ -120,6 +120,10 @@ router.get('/signup', async (ctx) => {
 	connection.end();
 });
 
+router.post('/uploadfiles', async (ctx) => {
+	console.log('客户端与服务端的 uploadfiles 函数 已关联');
+});
+
 app.use(router.routes());
 
 app.listen(3000);
