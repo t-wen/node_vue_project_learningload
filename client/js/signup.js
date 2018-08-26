@@ -25,9 +25,13 @@ var signup_container = new Vue({
 		github: '',
 		bio: '',
 		commits: null,
-		pagestate: '0'
+		pagestate: '0',
+		image: ''
 	},
 	methods: {
+		filesChange: function(event) {
+			this.image = event.target.files[0].name
+		},
 		return_index: function () {
 			this.pagestate = '0'
 		},
