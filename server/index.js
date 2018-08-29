@@ -128,7 +128,7 @@ router.post('/uploadfiles', koaBody({multipart: true}), async (ctx) => {
 
 	const file = ctx.request.files.myFile;
 	const reader = fs.createReadStream(file.path);
-	const stream = fs.createWriteStream('TracyWorld_icon' + '.jpg');
+	const stream = fs.createWriteStream('../client/image/TracyWorld_icon' + '.jpg');
 	reader.pipe(stream);
 });
 
