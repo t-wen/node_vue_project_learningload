@@ -45,7 +45,7 @@ var signup_container = new Vue({
 		},
 		filesChange: function(event) {
 			this.image = event.target.files[0]
-			this.imageSrc = window.URL.createObjectURL(event.target.files[0])
+			this.imageSrc = URL.createObjectURL(event.target.files[0])
 		},
 		return_index: function () {
 			this.pagestate = '0'
