@@ -26,7 +26,8 @@ var signup_container = new Vue({
 		bio: '',
 		commits: null,
 		pagestate: '0',
-		image: ''
+		image: '',
+		imageSrc: '/image/TracyWorld_icon.jpg'
 	},
 	methods: {
 		uploadfiles: function () {
@@ -44,6 +45,7 @@ var signup_container = new Vue({
 		},
 		filesChange: function(event) {
 			this.image = event.target.files[0]
+			this.imageSrc = window.URL.createObjectURL(event.target.files[0])
 		},
 		return_index: function () {
 			this.pagestate = '0'
